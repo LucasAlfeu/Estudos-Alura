@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #area {
+            background: rgb(62, 173, 62);
+            width: 200px;
+            height: 200px;
+            font: normal 20px arial;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <button id="botao">Clique Aqui</button>
+    <script>
+        var a = document.querySelector('#area');
+        var botao = document.querySelector('#botao');
+
+        botao.addEventListener('click', aparecer);
+
+        function clicar() {            
+            a.innerText = 'Clicou!';
+            a.style.visibility = 'hidden';
+        }
+
+
+        function sair() {
+            a.innerText = 'Interaja...'
+            a.style.background = 'red';
+        }
+
+        function aparecer() {
+            a.style.visibility = 'visible';
+            a.style.background = 'rgb(62, 173, 62)';
+        }
+    </script>
+</body>
+</html>

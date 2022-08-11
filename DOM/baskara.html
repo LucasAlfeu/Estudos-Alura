@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báskara</title>
+    <style>
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        div.res {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .ativo {
+            background: #181818;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Esquação do Segundo Grau</h1>
+    <input type="number" name="txt1" id="txt1" placeholder="x^2"> +
+    <input type="number" name="txt2" id="txt2" placeholder="x"> +
+    <input type="number" name="txt3" id="txt3" placeholder="Termo Independente">
+    <button class="botao" onclick="calcular()">Clique Aqui</button>
+    <div class="res"></div>
+    <button class="noturno">Modo Noturno</button>
+
+    <script>
+        const noturno = document.querySelector('.noturno');
+        const botao = document.querySelector('#botao');
+        let res = document.querySelector('div.res');
+        let corpo = document.getElementsByTagName('body');
+
+        noturno.addEventListener('click', escurecer)
+
+
+            function calcular () {
+            const txt1 = document.querySelector('input#txt1');
+            const txt2 = document.querySelector('input#txt2');
+            const txt3 = document.querySelector('input#txt3');
+
+            const a = Number(txt1.value);
+            const b = Number(txt2.value);
+            const c = Number(txt3.value);
+                
+            var delta = (b*b) +((-4) * (a * c))
+
+            var raiz1 = ((-b) + (Math.sqrt(delta))) / 2*a;
+            var raiz2 = ((-b) - (Math.sqrt(delta))) / 2*a;
+
+            res.innerHTML = `Resultado: {${raiz1}. ${raiz2}}`
+
+        }
+
+        function escurecer () {
+            document.body.classList.toggle('ativo')
+        }
+
+
+    </script>
+</body>
+</html>

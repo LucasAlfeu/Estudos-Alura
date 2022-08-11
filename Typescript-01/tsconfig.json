@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "dist/js",        // depois de ler os arquivos ts onde eu vou salvar os arquivos resultantes
+       "target": "ES6",              //diz pra qual versão do javascript o codigo será convertido
+       "noEmitOnError": true,        // não vai gerar um arquivo js enquanto não resolver todos os problemas do arquivo ts para passar na compilção
+        "noImplicitAny": true         // não dessa forma não deixa o tipo any implicitamente
+    },
+    "include": [ //Mostra a pagina onde os códigos em typescript serão escritos
+        "app/**/*"
+    ]     
+}
+
+// após isso ir no package.son e adicionar nos scripts a chave valo "compile": "tsc"
+//adicionar a chave valor no package.json "watch" : "tsc -w" para automatizar a compilação
+// depois ir no terminal e digitar npm rum watch para ele ficvar monitorando os arquivos

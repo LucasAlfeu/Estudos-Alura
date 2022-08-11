@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testando pattern</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <button class="some"></button>
+    <button class="aparece"></button>
+    <div class="caixa">
+        <h1>Olá Mundo</h1>
+    </div>
+    <script>
+
+        var botaoSome = document.querySelector('.some');
+        var botaoAparece = document.querySelector('.aparece');
+        var caixa = document.querySelector('.caixa');
+
+        function apareceCaixa() {
+            caixa.classList.add('ativo');
+        }
+
+        function someCaixa () {
+            caixa.classList.remove('ativo');
+        }
+
+        function moveCaixa() {
+            caixa.classList.add('mover');
+        }
+
+        function voltaCaixa () {
+            caixa.classList.remove('mover');
+        }
+
+        botaoAparece.onclick = apareceCaixa;
+        botaoSome.onclick = someCaixa;
+        botaoAparece.ondblclick = moveCaixa;
+        botaoSome.ondblclick = voltaCaixa;
+    </script>
+</body>
+</html>

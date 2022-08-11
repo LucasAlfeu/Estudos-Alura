@@ -1,0 +1,41 @@
+.imagem-carrossel-um {
+    object-fit: cover; /* fala pro elemento selecionado como ele deve se comportar dentro do container dele */
+    object-position: 0/*eixo x*/ 50%; /*eixo y*/; /* consegue movimentar a imagem dentro do container sem distorcer ela*/
+    height: 600px;
+}
+
+.imagem-carrossel-dois {
+    object-fit: cover; /* fala pro elemento selecionado como ele deve se comportar dentro do container dele */
+    height: 600px;
+}
+
+.carrossel-titulo {
+    font-family: 'Pacifico', cursive;
+}
+
+.cor-especial {
+    color: darkred !important;
+}
+
+.botao-cor-especial {
+    background-color: darkred;
+    color: white;
+}
+
+.borda-cor-especial {
+    border: 1px solid darkred;
+}
+.card-posicao-imagem {
+    object-fit: cover; /* fala pro elemento selecionado como ele deve se comportar dentro do container dele */
+    height: 200px;
+    
+}
+.card-posicao-imagem-beterraba{
+    object-fit: cover; /* fala pro elemento selecionado como ele deve se comportar dentro do container dele */
+    object-position: 0 75%;
+    height: 200px;
+    
+}
+.card-dimensoes{
+    max-width: 18rem;
+}
